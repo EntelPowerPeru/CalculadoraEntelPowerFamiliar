@@ -229,7 +229,7 @@ const INICIALIZAR_ELEMENTOS = {
       const opcion = document.createElement("option");
       opcion.textContent = obj.text;
       opcion.value = obj.id;
-      cbo_plan_familiar.appendChild(opcion);
+      select.appendChild(opcion);
     });
   },
   inputs() {
