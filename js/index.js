@@ -11,6 +11,7 @@ const EVENTOS = {
     this.btn_calcular();
     this.btn_limpiar();
     this.mostrar_datos_plan();
+    this.mostrar_datos_plan2();
   },
   rd_tipo_cliente() {
     const rd_tipo_cliente = document.querySelectorAll(".rd_tipo_cliente");
@@ -98,11 +99,11 @@ const EVENTOS = {
       );
       pago_total_plan_actual = Math.round(
         plan_linea_1 -
-        plan_linea_1 * descuento_linea_1 +
-        (plan_linea_2 - plan_linea_2 * descuento_linea_2) +
-        (plan_linea_3 - plan_linea_3 * descuento_linea_3) +
-        (plan_linea_4 - plan_linea_4 * descuento_linea_4) +
-        (plan_linea_5 - plan_linea_5 * descuento_linea_5),
+          plan_linea_1 * descuento_linea_1 +
+          (plan_linea_2 - plan_linea_2 * descuento_linea_2) +
+          (plan_linea_3 - plan_linea_3 * descuento_linea_3) +
+          (plan_linea_4 - plan_linea_4 * descuento_linea_4) +
+          (plan_linea_5 - plan_linea_5 * descuento_linea_5),
         2
       );
       pago_diferencia_factura =
@@ -147,7 +148,7 @@ const EVENTOS = {
         const id = event.currentTarget.id;
         const texto = select.options[select.selectedIndex].text;
 
-        const datos = LISTA_PLANES.find(e => e.text === texto).datos;
+        const datos = LISTA_PLANES.find((e) => e.text === texto).datos;
 
         if (id === "cbo_plan_linea_1") {
           document.querySelector("#bg_plan_linea_1").innerHTML = datos;
@@ -162,7 +163,25 @@ const EVENTOS = {
         }
       });
     });
-  }
+  },
+  mostrar_datos_plan2() {
+    const cbo_plan_familiar = document.querySelectorAll("#cbo_plan_familiar");
+
+    cbo_plan_familiar.forEach((select) => {
+      select.addEventListener("change", (event) => {
+        const id = event.currentTarget.id;
+        const texto = select.options[select.selectedIndex].text;
+
+        const datos = LISTA_PLANES_FAMILIARES.find(
+          (e) => e.text === texto
+        ).datos;
+
+        if (id === "cbo_plan_familiar1") {
+          document.querySelector("#bg_plan_linea_familiar1").innerHTML = datos;
+        }
+      });
+    });
+  },
 };
 
 const INICIALIZAR_ELEMENTOS = {

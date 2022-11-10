@@ -61,7 +61,7 @@ export const LISTA_PLANES = [
   { id: 59.9, text: "ENTEL POWER+ 59.90", datos: "75 GB" },
   { id: 74.9, text: "ENTEL POWER+ 74.90", datos: "100 GB" },
   { id: 89.9, text: "ENTEL POWER 89.90 SD", datos: "GB Ilimitados" },
-  { id: 99.9, text: "ENTEL POWER 99.90 SD", datos: "GB Ilimitados" }
+  { id: 99.9, text: "ENTEL POWER 99.90 SD", datos: "GB Ilimitados" },
 ];
 
 export const LISTA_PORCENTAJES = [
@@ -69,7 +69,7 @@ export const LISTA_PORCENTAJES = [
   { id: 0.2, text: "20%" },
   { id: 0.3, text: "30%" },
   { id: 0.5, text: "50%" },
-  { id: 0, text: "NO APLICA" }
+  { id: 0, text: "NO APLICA" },
 ];
 
 export const LISTA_LINEAS = [
@@ -77,23 +77,23 @@ export const LISTA_LINEAS = [
   { id: 2, text: "2" },
   { id: 3, text: "3" },
   { id: 4, text: "4" },
-  { id: 5, text: "5" }
+  { id: 5, text: "5" },
 ];
 
 export const LISTA_PLANES_FAMILIARES = [
-  { id: 0, text: "-" },
-  { id: 39.9, text: "ENTEL POWER FAMILIAR+ 39.90" },
-  { id: 49.9, text: "ENTEL POWER FAMILIAR+ 49.90" },
-  { id: 55.9, text: "ENTEL POWER FAMILIAR+ 55.90" },
-  { id: 59.9, text: "ENTEL POWER FAMILIAR+ 59.90" },
-  { id: 74.9, text: "ENTEL POWER FAMILIAR+ 74.90" },
-  { id: 89.9, text: "ENTEL POWER FAMILIAR 89.90 SD" },
-  { id: 99.9, text: "ENTEL POWER FAMILIAR 99.90 SD" },
-  { id: 109.9, text: "ENTEL POWER FAMILIAR 109.90" },
-  { id: 129.9, text: "ENTEL POWER FAMILIAR 129.90" },
-  { id: 159.9, text: "ENTEL POWER FAMILIAR 159.90" },
-  { id: 179.9, text: "ENTEL POWER FAMILIAR 179.90" },
-  { id: 199.9, text: "ENTEL POWER FAMILIAR 199.90" },
-  { id: 259.9, text: "ENTEL POWER FAMILIAR 259.90" },
-  { id: 299.9, text: "ENTEL POWER FAMILIAR 299.90" }
+  { id: 0, text: "-", datos: "" },
+  { id: 39.9, text: "ENTEL POWER FAMILIAR+ 39.90", datos: "25 GB" },
+  { id: 49.9, text: "ENTEL POWER FAMILIAR+ 49.90", datos: "35 GB" },
+  { id: 55.9, text: "ENTEL POWER FAMILIAR+ 55.90", datos: "50 GB" },
+  { id: 59.9, text: "ENTEL POWER FAMILIAR+ 59.90", datos: "75 GB" },
+  { id: 74.9, text: "ENTEL POWER FAMILIAR+ 74.90", datos: "120 GB" },
+  { id: 89.9, text: "ENTEL POWER FAMILIAR 89.90 SD", datos: "GB Ilimitados" },
+  { id: 99.9, text: "ENTEL POWER FAMILIAR 99.90 SD", datos: "GB Ilimitados" },
+  { id: 109.9, text: "ENTEL POWER FAMILIAR 109.90", datos: "140 GB AV" },
+  { id: 129.9, text: "ENTEL POWER FAMILIAR 129.90", datos: "150 GB AV" },
+  { id: 159.9, text: "ENTEL POWER FAMILIAR 159.90", datos: "160 GB AV" },
+  { id: 179.9, text: "ENTEL POWER FAMILIAR 179.90", datos: "165 GB AV" },
+  { id: 199.9, text: "ENTEL POWER FAMILIAR 199.90", datos: "170 GB AV" },
+  { id: 259.9, text: "ENTEL POWER FAMILIAR 259.90", datos: "180 GB AV" },
+  { id: 299.9, text: "ENTEL POWER FAMILIAR 299.90", datos: "190 GB AV" },
 ];
