@@ -74,7 +74,7 @@ const EVENTOS = {
         document.querySelector("#cbo_numero_lineas").value
       );
       const costo_plan_familiar = Number(
-        document.querySelector("#cbo_plan_familiar").value
+        document.querySelector(".cbo_plan_familiar").value
       );
       const promocion = 29.9;
 
