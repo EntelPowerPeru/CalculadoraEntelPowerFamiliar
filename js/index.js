@@ -198,7 +198,7 @@ const INICIALIZAR_ELEMENTOS = {
     const cbo_planes = document.querySelectorAll(".cbo_planes");
     const cbo_descuentos = document.querySelectorAll(".cbo_descuentos");
     const cbo_numero_lineas = document.querySelector("#cbo_numero_lineas");
-    const cbo_plan_familiar = document.querySelector(".cbo_plan_familiar");
+    const cbo_plan_familiar = document.querySelectorAll(".cbo_plan_familiar");
 
     cbo_planes.forEach((select) => {
       lista_planes.forEach((obj) => {
