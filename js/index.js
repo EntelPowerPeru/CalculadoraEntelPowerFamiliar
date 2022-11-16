@@ -91,18 +91,30 @@ const EVENTOS = {
         return;
       }
 
-      pago_sin_descuento = Number(numero_lineas * costo_plan_familiar).toFixed(2);
-      pago_con_descuento = Number((numero_lineas - 1) * promocion + costo_plan_familiar).toFixed(2);
-      pago_ahorro_familiar = Number(pago_sin_descuento - pago_con_descuento).toFixed(2);
+      pago_sin_descuento = Number(
+        Number(numero_lineas * costo_plan_familiar).toFixed(2)
+      );
+      pago_con_descuento = Number(
+        Number((numero_lineas - 1) * promocion + costo_plan_familiar).toFixed(2)
+      );
+      pago_ahorro_familiar = Number(
+        Number(pago_sin_descuento - pago_con_descuento).toFixed(2)
+      );
       pago_total_plan_actual = Number(
-        plan_linea_1 - plan_linea_1 * descuento_linea_1 +
-        (plan_linea_2 - plan_linea_2 * descuento_linea_2) +
-        (plan_linea_3 - plan_linea_3 * descuento_linea_3) +
-        (plan_linea_4 - plan_linea_4 * descuento_linea_4) +
-        (plan_linea_5 - plan_linea_5 * descuento_linea_5),
-        2
-      ).toFixed(2);
-      pago_diferencia_factura = pago_total_plan_actual === 0 ? 0 : Number(pago_con_descuento - pago_total_plan_actual).toFixed(2);
+        Number(
+          plan_linea_1 -
+            plan_linea_1 * descuento_linea_1 +
+            (plan_linea_2 - plan_linea_2 * descuento_linea_2) +
+            (plan_linea_3 - plan_linea_3 * descuento_linea_3) +
+            (plan_linea_4 - plan_linea_4 * descuento_linea_4) +
+            (plan_linea_5 - plan_linea_5 * descuento_linea_5),
+          2
+        ).toFixed(2)
+      );
+      pago_diferencia_factura =
+        pago_total_plan_actual === 0
+          ? 0
+          : Number(pago_con_descuento - pago_total_plan_actual).toFixed(2);
 
       document.querySelector("#txt_pago_sin_descuento").value =
         pago_sin_descuento;
@@ -120,9 +132,12 @@ const EVENTOS = {
       plan_sugerido_cdp1 = lista_plan_sugerido[1];
       plan_sugerido_cdp2 = lista_plan_sugerido[2];
 
-      document.querySelector("#txt_plan_sugerido_linea_adicional").value = plan_sugerido_linea_adicional;
-      document.querySelector("#txt_plan_sugerido_cdp1").value = plan_sugerido_cdp1;
-      document.querySelector("#txt_plan_sugerido_cdp2").value = plan_sugerido_cdp2;
+      document.querySelector("#txt_plan_sugerido_linea_adicional").value =
+        plan_sugerido_linea_adicional;
+      document.querySelector("#txt_plan_sugerido_cdp1").value =
+        plan_sugerido_cdp1;
+      document.querySelector("#txt_plan_sugerido_cdp2").value =
+        plan_sugerido_cdp2;
     });
   },
   btn_limpiar() {
@@ -150,7 +165,7 @@ const EVENTOS = {
         const id = event.currentTarget.id;
         const texto = select.options[select.selectedIndex].text;
 
-        const datos = LISTA_PLANES.find(e => e.text === texto).datos;
+        const datos = LISTA_PLANES.find((e) => e.text === texto).datos;
 
         if (id === "cbo_plan_linea_1") {
           document.querySelector("#bg_plan_linea_1").innerHTML = datos;
@@ -165,7 +180,7 @@ const EVENTOS = {
         }
       });
     });
-  }
+  },
 };
 
 const HELPERS = {
@@ -177,7 +192,9 @@ const HELPERS = {
       let g_rango_lista = [];
       let r17_celda = r17();
       let n17 = plan_sugerido_cdp1();
-      const f17 = Number(document.querySelector("#txt_pago_total_plan_actual").value);
+      const f17 = Number(
+        document.querySelector("#txt_pago_total_plan_actual").value
+      );
       const b2_c12_rango = [
         { id: 39.9, text: "Entel Power Base" },
         { id: 69.8, text: "Entel Power Familiar+ 39.90" },
@@ -189,7 +206,7 @@ const HELPERS = {
         { id: 129.8, text: "Entel Power Familiar 99.90 SD" },
         { id: 139.8, text: "Entel Power Familiar 109.90" },
         { id: 189.8, text: "Entel Power Familiar 159.90" },
-        { id: 1000, text: "Entel Power Familiar 199.90" }
+        { id: 1000, text: "Entel Power Familiar 199.90" },
       ];
       const b14_c24_rango = [
         { id: 69.8, text: "Entel Power Base" },
@@ -202,7 +219,7 @@ const HELPERS = {
         { id: 159.7, text: "Entel Power Familiar 99.90 SD" },
         { id: 169.7, text: "Entel Power Familiar 109.90" },
         { id: 219.7, text: "Entel Power Familiar 159.90" },
-        { id: 1000, text: "Entel Power Familiar 199.90" }
+        { id: 1000, text: "Entel Power Familiar 199.90" },
       ];
       const b26_c36_rango = [
         { id: 99.7, text: "Entel Power Base" },
@@ -215,7 +232,7 @@ const HELPERS = {
         { id: 189.6, text: "Entel Power Familiar 99.90 SD" },
         { id: 199.6, text: "Entel Power Familiar 109.90" },
         { id: 249.6, text: "Entel Power Familiar 159.90" },
-        { id: 1000, text: "Entel Power Familiar 199.90" }
+        { id: 1000, text: "Entel Power Familiar 199.90" },
       ];
       const b38_c48_rango = [
         { id: 129.6, text: ",Entel Power Base" },
@@ -228,22 +245,46 @@ const HELPERS = {
         { id: 219.5, text: ",Entel Power Familiar 99.90 SD" },
         { id: 229.5, text: ",Entel Power Familiar 109.90" },
         { id: 279.5, text: ",Entel Power Familiar 159.90" },
-        { id: 1000, text: ",Entel Power Familiar 199.90" }
+        { id: 1000, text: ",Entel Power Familiar 199.90" },
       ];
       const h2_i11_rango = [
         { id: "Entel Power Base", text: "Entel Power Familiar+ 39.90" },
-        { id: "Entel Power Familiar+ 39.90", text: "Entel Power Familiar+ 49.90" },
-        { id: "Entel Power Familiar+ 49.90", text: "Entel Power Familiar+ 55.90" },
-        { id: "Entel Power Familiar+ 55.90", text: "Entel Power Familiar+ 59.90" },
-        { id: "Entel Power Familiar+ 59.90", text: "Entel Power Familiar+ 74.90" },
-        { id: "Entel Power Familiar+ 74.90", text: "Entel Power Familiar 89.90 SD" },
-        { id: "Entel Power Familiar 89.90 SD", text: "Entel Power Familiar 99.90 SD" },
-        { id: "Entel Power Familiar 99.90 SD", text: "Entel Power Familiar 109.90" },
-        { id: "Entel Power Familiar 109.90", text: "Entel Power Familiar 159.90" }
+        {
+          id: "Entel Power Familiar+ 39.90",
+          text: "Entel Power Familiar+ 49.90",
+        },
+        {
+          id: "Entel Power Familiar+ 49.90",
+          text: "Entel Power Familiar+ 55.90",
+        },
+        {
+          id: "Entel Power Familiar+ 55.90",
+          text: "Entel Power Familiar+ 59.90",
+        },
+        {
+          id: "Entel Power Familiar+ 59.90",
+          text: "Entel Power Familiar+ 74.90",
+        },
+        {
+          id: "Entel Power Familiar+ 74.90",
+          text: "Entel Power Familiar 89.90 SD",
+        },
+        {
+          id: "Entel Power Familiar 89.90 SD",
+          text: "Entel Power Familiar 99.90 SD",
+        },
+        {
+          id: "Entel Power Familiar 99.90 SD",
+          text: "Entel Power Familiar 109.90",
+        },
+        {
+          id: "Entel Power Familiar 109.90",
+          text: "Entel Power Familiar 159.90",
+        },
         //{ id: "Entel Power Familiar 159.90", text: "Entel Power Familiar 199.90" }
       ];
 
-      document.querySelectorAll(".cbo_planes").forEach(elemento => {
+      document.querySelectorAll(".cbo_planes").forEach((elemento) => {
         if (Number(elemento.value) > 0) {
           g_rango_cantidad++;
         }
@@ -253,55 +294,71 @@ const HELPERS = {
 
       if (n7 <= g_rango_cantidad) {
         resultado = "-";
-      } else if (g_rango_lista.every(linea => r17_celda >= linea)) {
+      } else if (g_rango_lista.every((linea) => r17_celda >= linea)) {
         resultado = n17;
       } else if (n7 === 2) {
         let valor_minino = 0;
 
-        if (b2_c12_rango.every(e => e.id >= f17)) {
+        if (b2_c12_rango.every((e) => e.id >= f17)) {
           valor_minino = users.reduce((prev, act) => {
             return act.id < prev.id ? act : prev;
           }).id;
         }
 
-        const buscar_v_interno = b2_c12_rango.find(e => e.id === valor_minino).text;
-        const buscar_v_externo = h2_i11_rango.find(e => e.id === buscar_v_interno).text;
+        const buscar_v_interno = b2_c12_rango.find(
+          (e) => e.id === valor_minino
+        ).text;
+        const buscar_v_externo = h2_i11_rango.find(
+          (e) => e.id === buscar_v_interno
+        ).text;
         resultado = buscar_v_externo;
       } else if (n7 === 3) {
         let valor_minino = 0;
 
-        if (b14_c24_rango.every(e => e.id >= f17)) {
+        if (b14_c24_rango.every((e) => e.id >= f17)) {
           valor_minino = users.reduce((prev, act) => {
             return act.id < prev.id ? act : prev;
           }).id;
         }
 
-        const buscar_v_interno = b14_c24_rango.find(e => e.id === valor_minino).text;
-        const buscar_v_externo = h2_i11_rango.find(e => e.id === buscar_v_interno).text;
+        const buscar_v_interno = b14_c24_rango.find(
+          (e) => e.id === valor_minino
+        ).text;
+        const buscar_v_externo = h2_i11_rango.find(
+          (e) => e.id === buscar_v_interno
+        ).text;
         resultado = buscar_v_externo;
       } else if (n7 === 4) {
         let valor_minino = 0;
 
-        if (b26_c36_rango.every(e => e.id >= f17)) {
+        if (b26_c36_rango.every((e) => e.id >= f17)) {
           valor_minino = users.reduce((prev, act) => {
             return act.id < prev.id ? act : prev;
           }).id;
         }
 
-        const buscar_v_interno = b26_c36_rango.find(e => e.id === valor_minino).text;
-        const buscar_v_externo = h2_i11_rango.find(e => e.id === buscar_v_interno).text;
+        const buscar_v_interno = b26_c36_rango.find(
+          (e) => e.id === valor_minino
+        ).text;
+        const buscar_v_externo = h2_i11_rango.find(
+          (e) => e.id === buscar_v_interno
+        ).text;
         resultado = buscar_v_externo;
       } else if (n7 === 5) {
         let valor_minino = 0;
 
-        if (b38_c48_rango.every(e => e.id >= f17)) {
+        if (b38_c48_rango.every((e) => e.id >= f17)) {
           valor_minino = users.reduce((prev, act) => {
             return act.id < prev.id ? act : prev;
           }).id;
         }
 
-        const buscar_v_interno = b38_c48_rango.find(e => e.id === valor_minino).text;
-        const buscar_v_externo = h2_i11_rango.find(e => e.id === buscar_v_interno).text;
+        const buscar_v_interno = b38_c48_rango.find(
+          (e) => e.id === valor_minino
+        ).text;
+        const buscar_v_externo = h2_i11_rango.find(
+          (e) => e.id === buscar_v_interno
+        ).text;
         resultado = buscar_v_externo;
       } else {
         resultado = "ERROR";
@@ -326,9 +383,9 @@ const HELPERS = {
         { id: "Entel Power Familiar 179.90", text: 179.9 },
         { id: "Entel Power Familiar 199.90", text: 199.9 },
         { id: "Entel Power Familiar 259.90", text: 259.9 },
-        { id: "Entel Power Familiar 299.90", text: 299.9 }
+        { id: "Entel Power Familiar 299.90", text: 299.9 },
       ];
-      const resultado = l2_m15_rango.find(e => n17 === e.id).text;
+      const resultado = l2_m15_rango.find((e) => n17 === e.id).text;
 
       return resultado;
     }
@@ -341,14 +398,38 @@ const HELPERS = {
         let g_rango_lista = [];
         const h2_i11_rango = [
           { id: "Entel Power Base", text: "Entel Power Familiar+ 39.90" },
-          { id: "Entel Power Familiar+ 39.90", text: "Entel Power Familiar+ 49.90" },
-          { id: "Entel Power Familiar+ 49.90", text: "Entel Power Familiar+ 55.90" },
-          { id: "Entel Power Familiar+ 55.90", text: "Entel Power Familiar+ 59.90" },
-          { id: "Entel Power Familiar+ 59.90", text: "Entel Power Familiar+ 74.90" },
-          { id: "Entel Power Familiar+ 74.90", text: "Entel Power Familiar 89.90 SD" },
-          { id: "Entel Power Familiar 89.90 SD", text: "Entel Power Familiar 99.90 SD" },
-          { id: "Entel Power Familiar 99.90 SD", text: "Entel Power Familiar 109.90" },
-          { id: "Entel Power Familiar 109.90", text: "Entel Power Familiar 159.90" }
+          {
+            id: "Entel Power Familiar+ 39.90",
+            text: "Entel Power Familiar+ 49.90",
+          },
+          {
+            id: "Entel Power Familiar+ 49.90",
+            text: "Entel Power Familiar+ 55.90",
+          },
+          {
+            id: "Entel Power Familiar+ 55.90",
+            text: "Entel Power Familiar+ 59.90",
+          },
+          {
+            id: "Entel Power Familiar+ 59.90",
+            text: "Entel Power Familiar+ 74.90",
+          },
+          {
+            id: "Entel Power Familiar+ 74.90",
+            text: "Entel Power Familiar 89.90 SD",
+          },
+          {
+            id: "Entel Power Familiar 89.90 SD",
+            text: "Entel Power Familiar 99.90 SD",
+          },
+          {
+            id: "Entel Power Familiar 99.90 SD",
+            text: "Entel Power Familiar 109.90",
+          },
+          {
+            id: "Entel Power Familiar 109.90",
+            text: "Entel Power Familiar 159.90",
+          },
           //{ id: "Entel Power Familiar 159.90", text: "Entel Power Familiar 199.90" }
         ];
         const l2_m15_rango = [
@@ -365,19 +446,19 @@ const HELPERS = {
           { id: "Entel Power Familiar 179.90", text: 179.9 },
           { id: "Entel Power Familiar 199.90", text: 199.9 },
           { id: "Entel Power Familiar 259.90", text: 259.9 },
-          { id: "Entel Power Familiar 299.90", text: 299.9 }
+          { id: "Entel Power Familiar 299.90", text: 299.9 },
         ];
 
-        valor = l2_m15_rango.find(e => e.id === r15_celda).text;
+        valor = l2_m15_rango.find((e) => e.id === r15_celda).text;
 
-        document.querySelectorAll(".cbo_planes").forEach(elemento => {
+        document.querySelectorAll(".cbo_planes").forEach((elemento) => {
           g_rango_lista.push(Number(elemento.value));
         });
 
-        if (g_rango_lista.every(e => valor >= e)) {
+        if (g_rango_lista.every((e) => valor >= e)) {
           resultado = r15_celda;
         } else {
-          resultado = h2_i11_rango.find(e => e.id === r15_celda).text;
+          resultado = h2_i11_rango.find((e) => e.id === r15_celda).text;
         }
 
         return resultado;
@@ -390,7 +471,9 @@ const HELPERS = {
       try {
         let resultado = 0;
         const n7 = Number(document.querySelector("#cbo_numero_lineas").value);
-        const f17 = Number(document.querySelector("#txt_pago_total_plan_actual").value);
+        const f17 = Number(
+          document.querySelector("#txt_pago_total_plan_actual").value
+        );
         const e2_f15_rango = [
           { id: 69.8, text: "Entel Power Familiar+ 39.90" },
           { id: 79.8, text: "Entel Power Familiar+ 49.90" },
@@ -405,7 +488,7 @@ const HELPERS = {
           { id: 209.8, text: "Entel Power Familiar 179.90" },
           { id: 229.8, text: "Entel Power Familiar 199.90" },
           { id: 289.8, text: "Entel Power Familiar 259.90" },
-          { id: 329.8, text: "Entel Power Familiar 299.90" }
+          { id: 329.8, text: "Entel Power Familiar 299.90" },
         ];
         const e17_f30_rango = [
           { id: 99.7, text: "Entel Power Familiar+ 39.90" },
@@ -421,7 +504,7 @@ const HELPERS = {
           { id: 239.7, text: "Entel Power Familiar 179.90" },
           { id: 259.7, text: "Entel Power Familiar 199.90" },
           { id: 319.7, text: "Entel Power Familiar 259.90" },
-          { id: 359.7, text: "Entel Power Familiar 299.90" }
+          { id: 359.7, text: "Entel Power Familiar 299.90" },
         ];
         const e32_f45_rango = [
           { id: 129.6, text: "Entel Power Familiar+ 39.90" },
@@ -437,7 +520,7 @@ const HELPERS = {
           { id: 269.6, text: "Entel Power Familiar 179.90" },
           { id: 289.6, text: "Entel Power Familiar 199.90" },
           { id: 349.6, text: "Entel Power Familiar 259.90" },
-          { id: 389.6, text: "Entel Power Familiar 299.90" }
+          { id: 389.6, text: "Entel Power Familiar 299.90" },
         ];
         const e47_f60_rango = [
           { id: 159.5, text: "Entel Power Familiar+ 39.90" },
@@ -453,17 +536,17 @@ const HELPERS = {
           { id: 299.5, text: "Entel Power Familiar 179.90" },
           { id: 319.5, text: "Entel Power Familiar 199.90" },
           { id: 379.5, text: "Entel Power Familiar 259.90" },
-          { id: 419.5, text: "Entel Power Familiar 299.90" }
+          { id: 419.5, text: "Entel Power Familiar 299.90" },
         ];
 
         if (n7 === 2) {
-          resultado = e2_f15_rango.find(e => e.id >= f17).text;
+          resultado = e2_f15_rango.find((e) => e.id >= f17).text;
         } else if (n7 === 3) {
-          resultado = e17_f30_rango.find(e => e.id >= f17).text;
+          resultado = e17_f30_rango.find((e) => e.id >= f17).text;
         } else if (n7 === 4) {
-          resultado = e32_f45_rango.find(e => e.id >= f17).text;
+          resultado = e32_f45_rango.find((e) => e.id >= f17).text;
         } else if (n7 === 5) {
-          resultado = e47_f60_rango.find(e => e.id >= f17).text;
+          resultado = e47_f60_rango.find((e) => e.id >= f17).text;
         } else {
           resultado = "Error";
         }
@@ -478,7 +561,9 @@ const HELPERS = {
       try {
         let resultado = 0;
         const n7 = Number(document.querySelector("#cbo_numero_lineas").value);
-        const f17 = Number(document.querySelector("#txt_pago_total_plan_actual").value);
+        const f17 = Number(
+          document.querySelector("#txt_pago_total_plan_actual").value
+        );
         const e2_f15_rango = [
           { id: 69.8, text: "Entel Power Familiar+ 39.90" },
           { id: 79.8, text: "Entel Power Familiar+ 49.90" },
@@ -493,7 +578,7 @@ const HELPERS = {
           { id: 209.8, text: "Entel Power Familiar 179.90" },
           { id: 229.8, text: "Entel Power Familiar 199.90" },
           { id: 289.8, text: "Entel Power Familiar 259.90" },
-          { id: 329.8, text: "Entel Power Familiar 299.90" }
+          { id: 329.8, text: "Entel Power Familiar 299.90" },
         ];
         const e17_f30_rango = [
           { id: 99.7, text: "Entel Power Familiar+ 39.90" },
@@ -509,7 +594,7 @@ const HELPERS = {
           { id: 239.7, text: "Entel Power Familiar 179.90" },
           { id: 259.7, text: "Entel Power Familiar 199.90" },
           { id: 319.7, text: "Entel Power Familiar 259.90" },
-          { id: 359.7, text: "Entel Power Familiar 299.90" }
+          { id: 359.7, text: "Entel Power Familiar 299.90" },
         ];
         const e32_f45_rango = [
           { id: 129.6, text: "Entel Power Familiar+ 39.90" },
@@ -525,7 +610,7 @@ const HELPERS = {
           { id: 269.6, text: "Entel Power Familiar 179.90" },
           { id: 289.6, text: "Entel Power Familiar 199.90" },
           { id: 349.6, text: "Entel Power Familiar 259.90" },
-          { id: 389.6, text: "Entel Power Familiar 299.90" }
+          { id: 389.6, text: "Entel Power Familiar 299.90" },
         ];
         const e47_f60_rango = [
           { id: 159.5, text: "Entel Power Familiar+ 39.90" },
@@ -541,17 +626,17 @@ const HELPERS = {
           { id: 299.5, text: "Entel Power Familiar 179.90" },
           { id: 319.5, text: "Entel Power Familiar 199.90" },
           { id: 379.5, text: "Entel Power Familiar 259.90" },
-          { id: 419.5, text: "Entel Power Familiar 299.90" }
+          { id: 419.5, text: "Entel Power Familiar 299.90" },
         ];
 
         if (n7 === 2) {
-          resultado = e2_f15_rango.reverse().find(e => e.id <= f17).text;
+          resultado = e2_f15_rango.reverse().find((e) => e.id <= f17).text;
         } else if (n7 === 3) {
-          resultado = e17_f30_rango.reverse().find(e => e.id <= f17).text;
+          resultado = e17_f30_rango.reverse().find((e) => e.id <= f17).text;
         } else if (n7 === 4) {
-          resultado = e32_f45_rango.reverse().find(e => e.id <= f17).text;
+          resultado = e32_f45_rango.reverse().find((e) => e.id <= f17).text;
         } else if (n7 === 5) {
-          resultado = e47_f60_rango.reverse().find(e => e.id <= f17).text;
+          resultado = e47_f60_rango.reverse().find((e) => e.id <= f17).text;
         } else {
           resultado = "Error";
         }
@@ -562,8 +647,12 @@ const HELPERS = {
       }
     }
 
-    return [plan_sugerido_linea_adicional(), plan_sugerido_cdp1(), plan_sugerido_cdp2()];
-  }
+    return [
+      plan_sugerido_linea_adicional(),
+      plan_sugerido_cdp1(),
+      plan_sugerido_cdp2(),
+    ];
+  },
 };
 
 const INICIALIZAR_ELEMENTOS = {
