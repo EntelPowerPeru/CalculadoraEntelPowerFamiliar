@@ -97,3 +97,181 @@ export const LISTA_PLANES_FAMILIARES = [
   { id: 259.9, text: "ENTEL POWER FAMILIAR 259.90" },
   { id: 299.9, text: "ENTEL POWER FAMILIAR 299.90" }
 ];
+
+export const B2_C12_RANGO = [
+  { id: 39.9, text: "Entel Power Base" },
+  { id: 69.8, text: "Entel Power Familiar+ 39.90" },
+  { id: 79.8, text: "Entel Power Familiar+ 49.90" },
+  { id: 85.8, text: "Entel Power Familiar+ 55.90" },
+  { id: 89.8, text: "Entel Power Familiar+ 59.90" },
+  { id: 104.8, text: "Entel Power Familiar+ 74.90" },
+  { id: 119.8, text: "Entel Power Familiar 89.90 SD" },
+  { id: 129.8, text: "Entel Power Familiar 99.90 SD" },
+  { id: 139.8, text: "Entel Power Familiar 109.90" },
+  { id: 189.8, text: "Entel Power Familiar 159.90" },
+  { id: 1000, text: "Entel Power Familiar 199.90" },
+];
+
+export const B14_C24_RANGO = [
+  { id: 69.8, text: "Entel Power Base" },
+  { id: 99.7, text: "Entel Power Familiar+ 39.90" },
+  { id: 109.7, text: "Entel Power Familiar+ 49.90" },
+  { id: 115.7, text: "Entel Power Familiar+ 55.90" },
+  { id: 119.7, text: "Entel Power Familiar+ 59.90" },
+  { id: 134.7, text: "Entel Power Familiar+ 74.90" },
+  { id: 149.7, text: "Entel Power Familiar 89.90 SD" },
+  { id: 159.7, text: "Entel Power Familiar 99.90 SD" },
+  { id: 169.7, text: "Entel Power Familiar 109.90" },
+  { id: 219.7, text: "Entel Power Familiar 159.90" },
+  { id: 1000, text: "Entel Power Familiar 199.90" },
+];
+
+export const B26_C36_RANGO = [
+  { id: 99.7, text: "Entel Power Base" },
+  { id: 129.6, text: "Entel Power Familiar+ 39.90" },
+  { id: 139.6, text: "Entel Power Familiar+ 49.90" },
+  { id: 145.6, text: "Entel Power Familiar+ 55.90" },
+  { id: 149.6, text: "Entel Power Familiar+ 59.90" },
+  { id: 164.6, text: "Entel Power Familiar+ 74.90" },
+  { id: 179.6, text: "Entel Power Familiar 89.90 SD" },
+  { id: 189.6, text: "Entel Power Familiar 99.90 SD" },
+  { id: 199.6, text: "Entel Power Familiar 109.90" },
+  { id: 249.6, text: "Entel Power Familiar 159.90" },
+  { id: 1000, text: "Entel Power Familiar 199.90" },
+];
+
+export const B38_C48_RANGO = [
+  { id: 129.6, text: ",Entel Power Base" },
+  { id: 159.5, text: ",Entel Power Familiar+ 39.90" },
+  { id: 169.5, text: ",Entel Power Familiar+ 49.90" },
+  { id: 175.5, text: ",Entel Power Familiar+ 55.90" },
+  { id: 179.5, text: ",Entel Power Familiar+ 59.90" },
+  { id: 194.5, text: ",Entel Power Familiar+ 74.90" },
+  { id: 209.5, text: ",Entel Power Familiar 89.90 SD" },
+  { id: 219.5, text: ",Entel Power Familiar 99.90 SD" },
+  { id: 229.5, text: ",Entel Power Familiar 109.90" },
+  { id: 279.5, text: ",Entel Power Familiar 159.90" },
+  { id: 1000, text: ",Entel Power Familiar 199.90" },
+];
+
+export const E2_F15_RANGO = [
+  { id: 69.8, text: "Entel Power Familiar+ 39.90" },
+  { id: 79.8, text: "Entel Power Familiar+ 49.90" },
+  { id: 85.8, text: "Entel Power Familiar+ 55.90" },
+  { id: 89.8, text: "Entel Power Familiar+ 59.90" },
+  { id: 104.8, text: "Entel Power Familiar+ 74.90" },
+  { id: 119.8, text: "Entel Power Familiar 89.90 SD" },
+  { id: 129.8, text: "Entel Power Familiar 99.90 SD" },
+  { id: 139.8, text: "Entel Power Familiar 109.90" },
+  { id: 159.8, text: "Entel Power Familiar 129.90" },
+  { id: 189.8, text: "Entel Power Familiar 159.90" },
+  { id: 209.8, text: "Entel Power Familiar 179.90" },
+  { id: 229.8, text: "Entel Power Familiar 199.90" },
+  { id: 289.8, text: "Entel Power Familiar 259.90" },
+  { id: 329.8, text: "Entel Power Familiar 299.90" },
+];
+
+export const E17_F30_RANGO = [
+  { id: 99.7, text: "Entel Power Familiar+ 39.90" },
+  { id: 109.7, text: "Entel Power Familiar+ 49.90" },
+  { id: 115.7, text: "Entel Power Familiar+ 55.90" },
+  { id: 119.7, text: "Entel Power Familiar+ 59.90" },
+  { id: 134.7, text: "Entel Power Familiar+ 74.90" },
+  { id: 149.7, text: "Entel Power Familiar 89.90 SD" },
+  { id: 159.7, text: "Entel Power Familiar 99.90 SD" },
+  { id: 169.7, text: "Entel Power Familiar 109.90" },
+  { id: 189.7, text: "Entel Power Familiar 129.90" },
+  { id: 219.7, text: "Entel Power Familiar 159.90" },
+  { id: 239.7, text: "Entel Power Familiar 179.90" },
+  { id: 259.7, text: "Entel Power Familiar 199.90" },
+  { id: 319.7, text: "Entel Power Familiar 259.90" },
+  { id: 359.7, text: "Entel Power Familiar 299.90" },
+];
+
+export const E32_F45_RANGO = [
+  { id: 129.6, text: "Entel Power Familiar+ 39.90" },
+  { id: 139.6, text: "Entel Power Familiar+ 49.90" },
+  { id: 145.6, text: "Entel Power Familiar+ 55.90" },
+  { id: 149.6, text: "Entel Power Familiar+ 59.90" },
+  { id: 164.6, text: "Entel Power Familiar+ 74.90" },
+  { id: 179.6, text: "Entel Power Familiar 89.90 SD" },
+  { id: 189.6, text: "Entel Power Familiar 99.90 SD" },
+  { id: 199.6, text: "Entel Power Familiar 109.90" },
+  { id: 219.6, text: "Entel Power Familiar 129.90" },
+  { id: 249.6, text: "Entel Power Familiar 159.90" },
+  { id: 269.6, text: "Entel Power Familiar 179.90" },
+  { id: 289.6, text: "Entel Power Familiar 199.90" },
+  { id: 349.6, text: "Entel Power Familiar 259.90" },
+  { id: 389.6, text: "Entel Power Familiar 299.90" },
+];
+
+export const E47_F60_RANGO = [
+  { id: 159.5, text: "Entel Power Familiar+ 39.90" },
+  { id: 169.5, text: "Entel Power Familiar+ 49.90" },
+  { id: 175.5, text: "Entel Power Familiar+ 55.90" },
+  { id: 179.5, text: "Entel Power Familiar+ 59.90" },
+  { id: 194.5, text: "Entel Power Familiar+ 74.90" },
+  { id: 209.5, text: "Entel Power Familiar 89.90 SD" },
+  { id: 219.5, text: "Entel Power Familiar 99.90 SD" },
+  { id: 229.5, text: "Entel Power Familiar 109.90" },
+  { id: 249.5, text: "Entel Power Familiar 129.90" },
+  { id: 279.5, text: "Entel Power Familiar 159.90" },
+  { id: 299.5, text: "Entel Power Familiar 179.90" },
+  { id: 319.5, text: "Entel Power Familiar 199.90" },
+  { id: 379.5, text: "Entel Power Familiar 259.90" },
+  { id: 419.5, text: "Entel Power Familiar 299.90" },
+];
+
+export const H2_I11_RANGO = [
+  { id: "Entel Power Base", text: "Entel Power Familiar+ 39.90" },
+  {
+    id: "Entel Power Familiar+ 39.90",
+    text: "Entel Power Familiar+ 49.90",
+  },
+  {
+    id: "Entel Power Familiar+ 49.90",
+    text: "Entel Power Familiar+ 55.90",
+  },
+  {
+    id: "Entel Power Familiar+ 55.90",
+    text: "Entel Power Familiar+ 59.90",
+  },
+  {
+    id: "Entel Power Familiar+ 59.90",
+    text: "Entel Power Familiar+ 74.90",
+  },
+  {
+    id: "Entel Power Familiar+ 74.90",
+    text: "Entel Power Familiar 89.90 SD",
+  },
+  {
+    id: "Entel Power Familiar 89.90 SD",
+    text: "Entel Power Familiar 99.90 SD",
+  },
+  {
+    id: "Entel Power Familiar 99.90 SD",
+    text: "Entel Power Familiar 109.90",
+  },
+  {
+    id: "Entel Power Familiar 109.90",
+    text: "Entel Power Familiar 159.90",
+  },
+  //{ id: "Entel Power Familiar 159.90", text: "Entel Power Familiar 199.90" }
+];
+
+export const L2_M15_RANGO = [
+  { id: "Entel Power Familiar+ 39.90", text: 39.9 },
+  { id: "Entel Power Familiar+ 49.90", text: 49.9 },
+  { id: "Entel Power Familiar+ 55.90", text: 55.9 },
+  { id: "Entel Power Familiar+ 59.90", text: 59.9 },
+  { id: "Entel Power Familiar+ 74.90", text: 74.9 },
+  { id: "Entel Power Familiar 89.90 SD", text: 89.9 },
+  { id: "Entel Power Familiar 99.90 SD", text: 99.9 },
+  { id: "Entel Power Familiar 109.90", text: 109.9 },
+  { id: "Entel Power Familiar 129.90", text: 129.9 },
+  { id: "Entel Power Familiar 159.90", text: 159.9 },
+  { id: "Entel Power Familiar 179.90", text: 179.9 },
+  { id: "Entel Power Familiar 199.90", text: 199.9 },
+  { id: "Entel Power Familiar 259.90", text: 259.9 },
+  { id: "Entel Power Familiar 299.90", text: 299.9 },
+];
