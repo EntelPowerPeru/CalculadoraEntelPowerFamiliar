@@ -761,7 +761,7 @@ const HELPERS = {
 
 
   t26(lista_montos_planes_actuales, lineas_adicionales) {
-    const AH32 = "ENTEL POWER FAMILIAR+ 39.90";
+    const AH32 = "ENTEL POWER FAMILIAR 39.90 C";
 
     try {
       if (lineas_adicionales === 0) {
